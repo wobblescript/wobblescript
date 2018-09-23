@@ -1,0 +1,11 @@
+class MyGame extends Game {
+  update(state: GameState) {
+   var gamepad = state.input.getGamepad(0);
+
+   if (gamepad != null) {
+    if (gamepad.dPad.keys.down.justPressed) {
+      print('Down!!!');
+    }
+   } 
+  }
+}
