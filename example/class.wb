@@ -16,7 +16,7 @@ class Dog extends Animal {
   }
 }
 
-function main() {
+function main(): void {
  var dog = new Dog({age: 35});
  dog.greet('Bob'); 
 }

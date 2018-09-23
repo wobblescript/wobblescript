@@ -1,5 +1,5 @@
 class MyGame extends Game {
-  update(state: GameState) {
+  update(state: GameState): void {
    var gamepad = state.input.getGamepad(0);
 
    if (gamepad != null) {
@@ -8,4 +8,8 @@ class MyGame extends Game {
     }
    } 
   }
+}
+
+function main() : void {
+  runGame(new MyGame());
 }
