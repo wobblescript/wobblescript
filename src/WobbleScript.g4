@@ -16,6 +16,7 @@ classMember:
     'constructor' paramList block #ClassConstructor
     | 'abstract' name=ID paramList ':' returnType=type ';' #AbstractClassMethod
     | name=ID paramList ':' returnType=type block #ClassMethod
+    | 'var' name=ID ':' type ';' #ClassField
 ;
 
 funcDecl: 'function' name=ID paramList ':' returnType=type block;
@@ -28,7 +29,7 @@ type:
     ID #TypeRef
     | left=type '|' right=type #UnionType
     | type '?' #NullableType
-    | '{' (objectTypeField ','?)* '}' #ObjectType
+    | '{' (objectTypeField ';'?)* '}' #ObjectType
     | '(' type ')' #ParenType
 ;
 
