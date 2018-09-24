@@ -2,7 +2,7 @@ class Animal {
   abstract getAge(): number;
 
   greet(name: string): void {
-    print(`Hello, ${name}! My age is ${getAge()}.`);
+    print('Hello, ' + name + '! My age is ' + getAge() + '.');
   }
 }
 
