@@ -22,7 +22,6 @@ namespace wobblescript
 
         void addStatement(const Statement *statement);
 
-    private:
         struct Node
         {
             std::vector<const Statement *> statements;

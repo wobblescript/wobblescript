@@ -7,11 +7,11 @@
 #ifndef PROJECT_ANALYZER_H
 #define PROJECT_ANALYZER_H
 
-#include "data_flow_graph.h"
+#include <WobbleScriptParserBaseVisitor.h>
 
 namespace wobblescript
 {
-    class Analyzer
+    class Analyzer : public WobbleScriptParserBaseVisitor
     {
 
     };

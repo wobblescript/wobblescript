@@ -11,6 +11,6 @@ include_directories(${antlr4cpp_include_dirs_wobblescript})
 
 add_library(wobblescript ${antlr4cpp_src_files_wobblescript}
         c/c_api.h
-        analysis/analyzer.cc analysis/analyzer.h analysis/data_flow_graph.cc analysis/data_flow_graph.h analysis/statement.cc analysis/statement.h analysis/type.cc analysis/type.h analysis/object.cpp analysis/object.h)
+        analysis/analyzer.cc analysis/analyzer.h analysis/data_flow_graph.cc analysis/data_flow_graph.h analysis/statement.cc analysis/statement.h analysis/type.cc analysis/type.h analysis/object.cpp analysis/object.h analysis/module.cc analysis/module.h)
 
 add_dependencies(wobblescript antlr4cpp_generation_wobblescript)
