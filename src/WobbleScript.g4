@@ -60,6 +60,7 @@ expr:
     | TILDE_STRING #TildeStringLiteral
     | expr '?' #NullableExpr
     | expr '!' #NonNullableExpr
+    | 'function' (name=ID)? paramList block #FnExpr
     | ('<' type '>')? '[' (expr ','?)+ ']' #ArrayLiteralExpr
     | callee=expr argList #CallExpr
     | 'new' callee=expr argList #NewExpr
