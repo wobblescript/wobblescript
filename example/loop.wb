@@ -10,8 +10,8 @@ function main(): void {
   // implicitly-typed array.
   var array2 = [{foo: "bar"}];
 
-  // Use a for..in loop to loop through each item.
-  for (var item in array) {
+  // Use a for ... of loop to loop through each item.
+  for (var item of array) {
     print('Foo: ' + item.foo);
   }
 }
