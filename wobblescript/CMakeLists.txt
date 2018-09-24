@@ -5,8 +5,12 @@ find_library(ANTLR4 antlr4-runtime)
 find_path(ANTLR4_INC antlr4-runtime/antlr4-runtime.h)
 include_directories(${ANTLR4_INC}/antlr4-runtime)
 antlr4cpp_process_grammar(wobblescript wobblescript
-        ${CMAKE_CURRENT_SOURCE_DIR}/WobbleScriptLexer.g4
-        ${CMAKE_CURRENT_SOURCE_DIR}/WobbleScriptParser.g4)
+        src/WobbleScriptLexer.g4
+        src/WobbleScriptParser.g4)
 include_directories(${antlr4cpp_include_dirs_wobblescript})
-add_library(wobblescript ${antlr4cpp_src_files_wobblescript} c/c_api.h)
+
+add_library(wobblescript ${antlr4cpp_src_files_wobblescript}
+        c/c_api.h
+        analysis/analyzer.cc analysis/analyzer.h analysis/data_flow_graph.cc analysis/data_flow_graph.h analysis/statement.cc analysis/statement.h analysis/type.cc analysis/type.h analysis/object.cpp analysis/object.h)
+
 add_dependencies(wobblescript antlr4cpp_generation_wobblescript)
