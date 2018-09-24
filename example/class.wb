@@ -7,6 +7,8 @@ class Animal {
 }
 
 class Dog extends Animal {
+  var age: number;
+
   constructor(opts: {age: number}?) {
     this.age = opts?.age ?? 10;
   }

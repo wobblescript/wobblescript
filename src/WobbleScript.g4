@@ -58,9 +58,12 @@ expr:
     | STRING1 #String1Literal
     | STRING2 #String2Literal
     | TILDE_STRING #TildeStringLiteral
+    | expr '?' #NullableExpr
+    | expr '!' #NonNullableExpr
     | ('<' type '>')? '[' (expr ','?)+ ']' #ArrayLiteralExpr
     | callee=expr argList #CallExpr
     | 'new' callee=expr argList #NewExpr
+    | left=expr '??' right=expr #NullCoalescingExpr
     | left=expr op=('*'|'/'|'%') right=expr #MulDivModExpr
     | left=expr op=('+'|'-') right=expr #AddSubExpr
     | left=expr op=('^'|'&'|'|') right=expr #XorAndOrExpr
