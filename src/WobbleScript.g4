@@ -10,11 +10,11 @@ decl: typeDecl | classDecl | funcDecl;
 
 typeDecl: 'type' name=ID '=' type ';'?;
 
-classDecl: 'class' name=ID '{' '}';
+classDecl: 'class' name=ID ('extends' extends=ID)? '{' '}';
 
 classMember:
-    'abstract' name=ID paramList ':' returnType=type ';' #AbstractClassMember
-    | 'abstract' name=ID paramList ':' returnType=type ';' #AbstractClassMember
+    'abstract' name=ID paramList ':' returnType=type ';' #AbstractClassMethod
+    | name=ID paramList ':' returnType=type block #ClassMethod
 ;
 
 funcDecl: 'function' name=ID paramList ':' returnType=type block;
