@@ -8,5 +8,5 @@ antlr4cpp_process_grammar(wobblescript wobblescript
         ${CMAKE_CURRENT_SOURCE_DIR}/WobbleScriptLexer.g4
         ${CMAKE_CURRENT_SOURCE_DIR}/WobbleScriptParser.g4)
 include_directories(${antlr4cpp_include_dirs_wobblescript})
-add_library(wobblescript ${antlr4cpp_src_files_wobblescript})
+add_library(wobblescript ${antlr4cpp_src_files_wobblescript} c/c_api.h)
 add_dependencies(wobblescript antlr4cpp_generation_wobblescript)
