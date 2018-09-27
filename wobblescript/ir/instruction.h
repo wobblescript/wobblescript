@@ -13,10 +13,13 @@ namespace wobblescript
 {
     namespace ir
     {
+        class ReturnInstruction;
+
         template<typename T>
         class InstructionVisitor
         {
-
+        public:
+            virtual T visitReturnInstruction(const ReturnInstruction *ctx) = 0;
         };
 
         class Instruction
