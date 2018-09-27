@@ -13,12 +13,26 @@ namespace wobblescript
 {
     namespace ir
     {
+        class Function;
+
+        template<typename T>
+        class FunctionVisitor
+        {
+        public:
+            virtual T visitFunction(const Function *ctx) = 0;
+        };
+
         class Function
         {
         public:
             const Block *GetEntryBlock() const;
 
             const std::vector<const Block *> &GetBlocks() const;
+
+            template<typename T>
+            T accept(FunctionVisitor<T> *visitor) const {
+                return visitor->visitFunction(this);
+            }
 
             void AddBlock(const Block *block);
 

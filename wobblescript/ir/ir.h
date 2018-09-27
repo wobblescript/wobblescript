@@ -7,7 +7,7 @@
 #ifndef PROJECT_IR_H
 #define PROJECT_IR_H
 
-#include "binary_artifact.h"
+#include "../bytecode/bytecode_writer.h"
 #include "block.h"
 #include "function.h"
 #include "linked_program.h"

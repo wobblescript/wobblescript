@@ -7,10 +7,16 @@
 #ifndef PROJECT_LINKED_PROGRAM_H
 #define PROJECT_LINKED_PROGRAM_H
 
-class LinkedProgram
+namespace wobblescript
 {
+    namespace ir
+    {
+        class LinkedProgram
+        {
 
-};
+        };
+    }
+}
 
 
 #endif //PROJECT_LINKED_PROGRAM_H

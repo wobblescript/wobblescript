@@ -8,12 +8,14 @@
 #define PROJECT_ANALYZER_H
 
 #include <WobbleScriptParserBaseVisitor.h>
+#include "../ir/ir.h"
 
 namespace wobblescript
 {
     class Analyzer : public WobbleScriptParserBaseVisitor
     {
-
+    public:
+        antlrcpp::Any visitFuncDecl(WobbleScriptParserParser::FuncDeclContext *ctx) override;
     };
 }
 
