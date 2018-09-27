@@ -27,6 +27,8 @@ namespace wobblescript
 
             void visitReturnInstruction(const ir::ReturnInstruction *ctx) override;
 
+            jit_value_t visitConstantValue(const ir::ConstantValue *ctx) override;
+
         private:
             jit_function_t currentFunction;
         };
