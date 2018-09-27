@@ -9,10 +9,13 @@
 
 namespace wobblescript
 {
-    class Statement
+    namespace analysis
     {
+        class Statement
+        {
 
-    };
+        };
+    }
 }
 
 

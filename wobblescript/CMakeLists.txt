@@ -29,6 +29,6 @@ add_library(wobblescript ${antlr4cpp_src_files_wobblescript}
         bytecode/bytecode_writer.cc bytecode/bytecode_writer.h
         ir/linked_program.cc ir/linked_program.h
         ir/ir.h
-        jit/interpreter.cc jit/interpreter.h ir/value.cc ir/value.h ir/return_instruction.cc ir/return_instruction.h ir/constant_value.cc ir/constant_value.h)
+        jit/interpreter.cc jit/interpreter.h ir/value.cc ir/value.h ir/return_instruction.cc ir/return_instruction.h ir/constant_value.cc ir/constant_value.h analysis/object_or_type.cc analysis/object_or_type.h)
 
 add_dependencies(wobblescript antlr4cpp_generation_wobblescript)

@@ -11,24 +11,27 @@
 
 namespace wobblescript
 {
-    class Module
+    namespace analysis
     {
-    public:
-        enum ModuleSymbolType
+        class Module
         {
-            kFunction,
-            kType
-        };
-
-        struct ModuleSymbol
-        {
-            ModuleSymbolType type;
-            union
+        public:
+            enum ModuleSymbolType
             {
-                Type *asType;
+                kFunction,
+                kType
+            };
+
+            struct ModuleSymbol
+            {
+                ModuleSymbolType type;
+                union
+                {
+                    Type *asType;
+                };
             };
         };
-    };
+    }
 }
 
 

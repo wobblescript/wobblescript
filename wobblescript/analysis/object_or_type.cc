@@ -4,19 +4,4 @@
 //
 // Use of this source code is governed by an
 // MIT-style license that can be found in the LICENSE file.
-#ifndef PROJECT_TYPE_H
-#define PROJECT_TYPE_H
-
-namespace wobblescript
-{
-    namespace analysis
-    {
-        class Type
-        {
-
-        };
-    }
-}
-
-
-#endif //PROJECT_TYPE_H
+#include "object_or_type.h"

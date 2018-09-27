@@ -12,13 +12,16 @@
 
 namespace wobblescript
 {
-    class Analyzer : public WobbleScriptParserBaseVisitor
+    namespace analysis
     {
-    public:
-        antlrcpp::Any visitFuncDecl(WobbleScriptParserParser::FuncDeclContext *ctx) override;
+        class Analyzer : public WobbleScriptParserBaseVisitor
+        {
+        public:
+            antlrcpp::Any visitFuncDecl(WobbleScriptParserParser::FuncDeclContext *ctx) override;
 
-        antlrcpp::Any visitReturnStmt(WobbleScriptParserParser::ReturnStmtContext *ctx) override;
-    };
+            antlrcpp::Any visitReturnStmt(WobbleScriptParserParser::ReturnStmtContext *ctx) override;
+        };
+    }
 }
 
 #endif //PROJECT_ANALYZER_H

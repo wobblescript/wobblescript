@@ -11,15 +11,18 @@
 
 namespace wobblescript
 {
-    class Object
+    namespace analysis
     {
-        Object(const Type *type);
+        class Object
+        {
+            Object(const Type *type);
 
-        const Type *getType() const;
+            const Type *getType() const;
 
-    private:
-        const Type *type;
-    };
+        private:
+            const Type *type;
+        };
+    }
 }
 
 
