@@ -11,20 +11,20 @@ namespace wobblescript
 {
     namespace ir
     {
-        class Value;
+        class ConstantValue;
 
         template<typename T>
         class ValueVisitor
         {
         public:
-            //virtual T accept(const Value *ctx) = 0;
+            virtual T VisitConstantValue(const ConstantValue *ctx) = 0;
         };
 
         class Value
         {
         public:
             template<typename T>
-            virtual T accept(ValueVisitor<T> *visitor) = 0;
+            virtual T Accept(ValueVisitor<T> *visitor) const = 0;
         };
     }
 }
