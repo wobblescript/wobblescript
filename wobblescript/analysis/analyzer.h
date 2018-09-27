@@ -16,6 +16,8 @@ namespace wobblescript
     {
     public:
         antlrcpp::Any visitFuncDecl(WobbleScriptParserParser::FuncDeclContext *ctx) override;
+
+        antlrcpp::Any visitReturnStmt(WobbleScriptParserParser::ReturnStmtContext *ctx) override;
     };
 }
 

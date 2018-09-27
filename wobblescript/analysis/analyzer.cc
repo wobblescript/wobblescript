@@ -21,3 +21,15 @@ antlrcpp::Any wobblescript::Analyzer::visitFuncDecl(wobblescript::WobbleScriptPa
     ctx->block()->accept(this);
     return Any(func);
 }
+
+Any wobblescript::Analyzer::visitReturnStmt(wobblescript::WobbleScriptParserParser::ReturnStmtContext *ctx) {
+    auto valueAny = ctx->expr()->accept(this);
+
+    if (valueAny.isNotNull()) {
+        auto *asValue = valueAny.as<ir::Value*>();
+        return Any(new ir::ReturnInstruction(asValue));
+    } else {
+        // TODO: Handle error
+        return Any();
+    }
+}
