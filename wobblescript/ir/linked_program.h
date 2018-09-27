@@ -11,9 +11,22 @@ namespace wobblescript
 {
     namespace ir
     {
+        class LinkedProgram;
+
+        template<typename T>
+        class LinkedProgramVisitor
+        {
+        public:
+            virtual T visitLinkedProgram(const LinkedProgram *ctx) = 0;
+        };
+
         class LinkedProgram
         {
-
+        public:
+            template<typename T>
+            T accept(LinkedProgramVisitor *visitor) const {
+                return visitor->visitLinkedProgram(this);
+            }
         };
     }
 }
