@@ -11,6 +11,6 @@
 #include "block.h"
 #include "function.h"
 #include "linked_program.h"
-#include "statement.h"
+#include "instruction.h"
 
 #endif //PROJECT_IR_H

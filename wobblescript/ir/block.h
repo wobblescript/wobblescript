@@ -9,7 +9,7 @@
 
 #include <string>
 #include <vector>
-#include "statement.h"
+#include "instruction.h"
 
 namespace wobblescript
 {
@@ -22,13 +22,13 @@ namespace wobblescript
 
             const std::string &GetName() const;
 
-            const std::vector<const Statement *> &GetStatements() const;
+            const std::vector<const Instruction *> &GetStatements() const;
 
-            void AddStatement(const Statement *statement);
+            void AddStatement(const Instruction *statement);
 
         private:
             const std::string name;
-            std::vector<const Statement *> statements;
+            std::vector<const Instruction *> statements;
         };
     }
 }

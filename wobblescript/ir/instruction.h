@@ -11,7 +11,7 @@ namespace wobblescript
 {
     namespace ir
     {
-        class Statement
+        class Instruction
         {
 
         };
