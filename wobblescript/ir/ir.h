@@ -12,5 +12,7 @@
 #include "function.h"
 #include "linked_program.h"
 #include "instruction.h"
+#include "return_instruction.h"
+#include "value.h"
 
 #endif //PROJECT_IR_H

@@ -17,12 +17,18 @@ namespace wobblescript
         class Interpreter
                 : public ir::FunctionVisitor<jit_function_t>,
                   public ir::InstructionVisitor<void>,
-                  public ir::LinkedProgramVisitor<void>
+                  public ir::LinkedProgramVisitor<void>,
+                  public ir::ValueVisitor<jit_value_t>
         {
         public:
             jit_function_t visitFunction(const ir::Function *ctx) override;
 
             void visitLinkedProgram(const ir::LinkedProgram *ctx) override;
+
+            void visitReturnInstruction(const ir::ReturnInstruction *ctx) override;
+
+        private:
+            jit_function_t currentFunction;
         };
     }
 }

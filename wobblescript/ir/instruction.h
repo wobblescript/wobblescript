@@ -27,7 +27,7 @@ namespace wobblescript
             //virtual uint8_t GetSizeInBytes() = 0;
 
             template<typename T>
-            virtual T Accept(InstructionVisitor<T> *visitor) const = 0;
+            virtual T accept(InstructionVisitor<T> *visitor) const = 0;
         };
     }
 }

@@ -13,3 +13,8 @@ jit_function_t wobblescript::jit::Interpreter::visitFunction(const wobblescript:
 void wobblescript::jit::Interpreter::visitLinkedProgram(const wobblescript::ir::LinkedProgram *ctx) {
     // TODO: Actually keep track of functions, etc.
 }
+
+void wobblescript::jit::Interpreter::visitReturnInstruction(const wobblescript::ir::ReturnInstruction *ctx) {
+    auto *returnValue = ctx->getValue()->accept(this); // TODO: Handle error
+    jit_insn_return(currentFunction, returnValue);
+}

@@ -19,10 +19,10 @@ namespace wobblescript
         public:
             explicit ReturnInstruction(const Value *value);
 
-            const Value *GetValue() const;
+            const Value *getValue() const;
 
             template<typename T>
-            T Accept(InstructionVisitor<T> *visitor) const override {
+            T accept(InstructionVisitor<T> *visitor) const override {
                 return visitor->visitReturnInstruction(this);
             }
 

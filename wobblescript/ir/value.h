@@ -17,14 +17,14 @@ namespace wobblescript
         class ValueVisitor
         {
         public:
-            virtual T VisitConstantValue(const ConstantValue *ctx) = 0;
+            virtual T visitConstantValue(const ConstantValue *ctx) = 0;
         };
 
         class Value
         {
         public:
             template<typename T>
-            virtual T Accept(ValueVisitor<T> *visitor) const = 0;
+            virtual T accept(ValueVisitor<T> *visitor) const = 0;
         };
     }
 }

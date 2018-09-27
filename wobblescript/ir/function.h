@@ -25,18 +25,18 @@ namespace wobblescript
         class Function
         {
         public:
-            const Block *GetEntryBlock() const;
+            const Block *getEntryBlock() const;
 
-            const std::vector<const Block *> &GetBlocks() const;
+            const std::vector<const Block *> &getBlocks() const;
 
             template<typename T>
             T accept(FunctionVisitor<T> *visitor) const {
                 return visitor->visitFunction(this);
             }
 
-            void AddBlock(const Block *block);
+            void addBlock(const Block *block);
 
-            void SetEntryBlock(const Block *block);
+            void setEntryBlock(const Block *block);
 
         private:
             std::vector<const Block *> blocks;

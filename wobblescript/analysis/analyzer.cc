@@ -15,7 +15,7 @@ antlrcpp::Any wobblescript::Analyzer::visitFuncDecl(wobblescript::WobbleScriptPa
     // TODO: Set source info
     // TODO: Check for parameters
     auto *entry = new ir::Block("entry");
-    func->SetEntryBlock(entry);
+    func->setEntryBlock(entry);
     // TODO: Visit block
     // TODO: Throw on empty statement
     ctx->block()->accept(this);

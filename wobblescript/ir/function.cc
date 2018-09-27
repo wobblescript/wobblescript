@@ -6,18 +6,18 @@
 // MIT-style license that can be found in the LICENSE file.
 #include "function.h"
 
-const wobblescript::ir::Block *wobblescript::ir::Function::GetEntryBlock() const {
+const wobblescript::ir::Block *wobblescript::ir::Function::getEntryBlock() const {
     return nullptr;
 }
 
-const std::vector<const Block *> &wobblescript::ir::Function::GetBlocks() const {
+const std::vector<const Block *> &wobblescript::ir::Function::getBlocks() const {
     return <#initializer#>;
 }
 
-void wobblescript::ir::Function::AddBlock(const wobblescript::ir::Block *block) {
+void wobblescript::ir::Function::addBlock(const wobblescript::ir::Block *block) {
 
 }
 
-void wobblescript::ir::Function::SetEntryBlock(const wobblescript::ir::Block *block) {
+void wobblescript::ir::Function::setEntryBlock(const wobblescript::ir::Block *block) {
 
 }

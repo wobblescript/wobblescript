@@ -10,6 +10,6 @@ wobblescript::ir::ReturnInstruction::ReturnInstruction(const wobblescript::ir::V
     this->value = value;
 }
 
-const wobblescript::ir::Value *wobblescript::ir::ReturnInstruction::GetValue() const {
+const wobblescript::ir::Value *wobblescript::ir::ReturnInstruction::getValue() const {
     return value;
 }

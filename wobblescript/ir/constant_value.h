@@ -39,8 +39,8 @@ namespace wobblescript
             };
 
             template<typename T>
-            T Accept(ValueVisitor<T> *visitor) const override {
-                return visitor->VisitConstantValue(this);
+            T accept(ValueVisitor<T> *visitor) const override {
+                return visitor->visitConstantValue(this);
             }
         };
 
